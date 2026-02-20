@@ -1,13 +1,14 @@
-# Private Skills Vault
+# Agent Skills
 
-> Repositorio privado para skills de trabajo y uso personal.
+> Repositorio publico de skills para agentes.
 
-![Private](https://img.shields.io/badge/visibility-private-black) ![Skills](https://img.shields.io/badge/skills-managed-blue)
+![Visibility](https://img.shields.io/badge/visibility-public-brightgreen) ![Skills](https://img.shields.io/badge/skills-managed-blue)
 
 ## Overview
 
 - Repo: `iesedobleac/agent-skills`
-- Ultima actualizacion: `2026-02-20 14:27 UTC`
+- Visibilidad: `Publico`
+- Ultima actualizacion: `2026-02-20 14:33 UTC`
 
 ## Skills by Category
 
@@ -15,7 +16,7 @@
 
 | Skill | Descripcion | Ruta | Actualizado |
 |---|---|---|---|
-| `skills-publisher` | Publica en GitHub privado las skills indicadas y regenera automaticamente un README profesional con categorias, iconos y tabla de skills. | `.codex/skills/skills-publisher` | `2026-02-20T14:27:50Z` |
+| `skills-publisher` | Publica en GitHub las skills indicadas y regenera automaticamente un README profesional con categorias, iconos y tabla de skills. | `.codex/skills/skills-publisher` | `2026-02-20T14:33:33Z` |
 
 ## Publishing
 
