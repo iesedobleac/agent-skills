@@ -4,9 +4,9 @@
       "name": "skills-publisher",
       "category": "Automation",
       "icon": "⚙️",
-      "description": "Publica en GitHub privado las skills indicadas y regenera automaticamente un README profesional con categorias, iconos y tabla de skills.",
+      "description": "Publica en GitHub las skills indicadas y regenera automaticamente un README profesional con categorias, iconos y tabla de skills.",
       "path": ".codex/skills/skills-publisher",
-      "updated_at": "2026-02-20T14:27:50Z"
+      "updated_at": "2026-02-20T14:33:33Z"
     }
   ]
 }
