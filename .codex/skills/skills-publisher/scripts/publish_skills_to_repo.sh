@@ -78,6 +78,19 @@ catalog_file="$workdir/skills-catalog.json"
 readme_file="$workdir/README.md"
 changelog_file="$workdir/CHANGELOG.md"
 
+repo_is_private="$(gh api "repos/$repo" --jq '.private')"
+if [[ "$repo_is_private" == "true" ]]; then
+  readme_title="Private Skills Vault"
+  readme_tagline="Repositorio privado para skills de trabajo y uso personal."
+  visibility_badge="![Visibility](https://img.shields.io/badge/visibility-private-black)"
+  visibility_label="Privado"
+else
+  readme_title="Agent Skills"
+  readme_tagline="Repositorio publico de skills para agentes."
+  visibility_badge="![Visibility](https://img.shields.io/badge/visibility-public-brightgreen)"
+  visibility_label="Publico"
+fi
+
 # Carga catalogo actual (si existe)
 if gh api "repos/$repo/contents/.codex/skills-catalog.json" --jq .content >/dev/null 2>&1; then
   gh api "repos/$repo/contents/.codex/skills-catalog.json" --jq .content | tr -d '\n' | base64 --decode > "$catalog_file"
@@ -260,15 +273,16 @@ done
 updated="$(date -u +"%Y-%m-%d %H:%M UTC")"
 
 {
-  echo "# Private Skills Vault"
+  echo "# $readme_title"
   echo
-  echo "> Repositorio privado para skills de trabajo y uso personal."
+  echo "> $readme_tagline"
   echo
-  echo "![Private](https://img.shields.io/badge/visibility-private-black) ![Skills](https://img.shields.io/badge/skills-managed-blue)"
+  echo "$visibility_badge ![Skills](https://img.shields.io/badge/skills-managed-blue)"
   echo
   echo "## Overview"
   echo
   echo "- Repo: \`$repo\`"
+  echo "- Visibilidad: \`$visibility_label\`"
   echo "- Ultima actualizacion: \`$updated\`"
   echo
   echo "## Skills by Category"
