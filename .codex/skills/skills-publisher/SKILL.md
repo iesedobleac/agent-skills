@@ -1,18 +1,18 @@
 ---
 name: skills-publisher
-description: Publica en GitHub privado las skills indicadas y regenera automaticamente un README profesional con categorias, iconos y tabla de skills.
+description: Publica en GitHub las skills indicadas y regenera automaticamente un README profesional con categorias, iconos y tabla de skills.
 metadata:
   short-description: Publicar skills privadas con README visual
 ---
 
 # Skills Publisher
 
-Usa esta skill cuando el usuario quiera subir skills concretas a su repositorio privado y mantener un `README.md` cuidado y actualizado.
+Usa esta skill cuando el usuario quiera subir skills concretas a su repositorio GitHub y mantener un `README.md` cuidado y actualizado.
 
 ## Objetivo
 
 - Subir solo las skills que indique el usuario.
-- Eliminar skills del repo privado cuando el usuario lo pida.
+- Eliminar skills del repo destino cuando el usuario lo pida.
 - Mantener estructura en el repo:
   - `.codex/skills/<skill-name>/...`
   - `.codex/skills-catalog.json`
